@@ -1,0 +1,3 @@
+[console_scripts]
+mpc_quad = quad_mpc.mpc_quad:main
+

@@ -1,0 +1,6 @@
+Invoking command in '/home/evannsrpi/nr_journal_v114/build/px4_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/evannsrpi/nr_journal_v114/src/px4_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/evannsrpi/nr_journal_v114/install/px4_msgs
+Invoked command in '/home/evannsrpi/nr_journal_v114/build/px4_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/evannsrpi/nr_journal_v114/src/px4_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/evannsrpi/nr_journal_v114/install/px4_msgs
+Invoking command in '/home/evannsrpi/nr_journal_v114/build/px4_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/evannsrpi/nr_journal_v114/build/px4_msgs -- -j4 -l4
+Invoked command in '/home/evannsrpi/nr_journal_v114/build/px4_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/evannsrpi/nr_journal_v114/build/px4_msgs -- -j4 -l4
+Invoking command in '/home/evannsrpi/nr_journal_v114/build/px4_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/evannsrpi/nr_journal_v114/build/px4_msgs
+Invoked command in '/home/evannsrpi/nr_journal_v114/build/px4_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/evannsrpi/nr_journal_v114/build/px4_msgs

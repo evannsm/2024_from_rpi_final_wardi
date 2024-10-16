@@ -1,0 +1,22 @@
+running develop
+running egg_info
+creating quad_newton_raphson.egg-info
+writing quad_newton_raphson.egg-info/PKG-INFO
+writing dependency_links to quad_newton_raphson.egg-info/dependency_links.txt
+writing entry points to quad_newton_raphson.egg-info/entry_points.txt
+writing requirements to quad_newton_raphson.egg-info/requires.txt
+writing top-level names to quad_newton_raphson.egg-info/top_level.txt
+writing manifest file 'quad_newton_raphson.egg-info/SOURCES.txt'
+reading manifest file 'quad_newton_raphson.egg-info/SOURCES.txt'
+writing manifest file 'quad_newton_raphson.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/evannsrpi/nr_journal_v114/install/quad_newton_raphson/lib/python3.10/site-packages/quad-newton-raphson.egg-link (link to .)
+Installing nr_quad script to /home/evannsrpi/nr_journal_v114/install/quad_newton_raphson/lib/quad_newton_raphson
+
+Installed /home/evannsrpi/nr_journal_v114/build/quad_newton_raphson
+running symlink_data
+creating /home/evannsrpi/nr_journal_v114/install/quad_newton_raphson/share/ament_index
+creating /home/evannsrpi/nr_journal_v114/install/quad_newton_raphson/share/ament_index/resource_index
+creating /home/evannsrpi/nr_journal_v114/install/quad_newton_raphson/share/ament_index/resource_index/packages
+symbolically linking /home/evannsrpi/nr_journal_v114/build/quad_newton_raphson/resource/quad_newton_raphson -> /home/evannsrpi/nr_journal_v114/install/quad_newton_raphson/share/ament_index/resource_index/packages
+symbolically linking /home/evannsrpi/nr_journal_v114/build/quad_newton_raphson/package.xml -> /home/evannsrpi/nr_journal_v114/install/quad_newton_raphson/share/quad_newton_raphson

@@ -1,0 +1,22 @@
+running develop
+running egg_info
+creating quad_mpc.egg-info
+writing quad_mpc.egg-info/PKG-INFO
+writing dependency_links to quad_mpc.egg-info/dependency_links.txt
+writing entry points to quad_mpc.egg-info/entry_points.txt
+writing requirements to quad_mpc.egg-info/requires.txt
+writing top-level names to quad_mpc.egg-info/top_level.txt
+writing manifest file 'quad_mpc.egg-info/SOURCES.txt'
+reading manifest file 'quad_mpc.egg-info/SOURCES.txt'
+writing manifest file 'quad_mpc.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/evannsrpi/nr_journal_v114/install/quad_mpc/lib/python3.10/site-packages/quad-mpc.egg-link (link to .)
+Installing mpc_quad script to /home/evannsrpi/nr_journal_v114/install/quad_mpc/lib/quad_mpc
+
+Installed /home/evannsrpi/nr_journal_v114/build/quad_mpc
+running symlink_data
+creating /home/evannsrpi/nr_journal_v114/install/quad_mpc/share/ament_index
+creating /home/evannsrpi/nr_journal_v114/install/quad_mpc/share/ament_index/resource_index
+creating /home/evannsrpi/nr_journal_v114/install/quad_mpc/share/ament_index/resource_index/packages
+symbolically linking /home/evannsrpi/nr_journal_v114/build/quad_mpc/resource/quad_mpc -> /home/evannsrpi/nr_journal_v114/install/quad_mpc/share/ament_index/resource_index/packages
+symbolically linking /home/evannsrpi/nr_journal_v114/build/quad_mpc/package.xml -> /home/evannsrpi/nr_journal_v114/install/quad_mpc/share/quad_mpc

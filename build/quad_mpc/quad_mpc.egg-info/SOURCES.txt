@@ -1,0 +1,16 @@
+package.xml
+setup.cfg
+setup.py
+quad_mpc/Logger.py
+quad_mpc/__init__.py
+quad_mpc/mpc_quad.py
+quad_mpc/workingGenMPC.py
+quad_mpc/workingModel.py
+quad_mpc.egg-info/PKG-INFO
+quad_mpc.egg-info/SOURCES.txt
+quad_mpc.egg-info/dependency_links.txt
+quad_mpc.egg-info/entry_points.txt
+quad_mpc.egg-info/requires.txt
+quad_mpc.egg-info/top_level.txt
+quad_mpc.egg-info/zip-safe
+resource/quad_mpc

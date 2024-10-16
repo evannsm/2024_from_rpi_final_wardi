@@ -1,0 +1,3 @@
+[console_scripts]
+nr_quad = quad_newton_raphson.nr_quad:main
+

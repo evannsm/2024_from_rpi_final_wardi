@@ -1,0 +1,15 @@
+package.xml
+setup.cfg
+setup.py
+quad_newton_raphson/Logger.py
+quad_newton_raphson/__init__.py
+quad_newton_raphson/jitted_pred_jac.py
+quad_newton_raphson/nr_quad.py
+quad_newton_raphson.egg-info/PKG-INFO
+quad_newton_raphson.egg-info/SOURCES.txt
+quad_newton_raphson.egg-info/dependency_links.txt
+quad_newton_raphson.egg-info/entry_points.txt
+quad_newton_raphson.egg-info/requires.txt
+quad_newton_raphson.egg-info/top_level.txt
+quad_newton_raphson.egg-info/zip-safe
+resource/quad_newton_raphson

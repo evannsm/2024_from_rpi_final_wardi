@@ -1,0 +1,24 @@
+[5.660s] Invoking command in '/home/evannsrpi/nr_journal_v114/build/quad_mpc': AMENT_PREFIX_PATH=/home/evannsrpi/nr_journal_v114/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/evannsrpi/nr_journal_v114/install/px4_msgs LD_LIBRARY_PATH=/home/evannsrpi/nr_journal_v114/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/evannsrpi/nr_journal_v114/build/quad_mpc/prefix_override:/home/evannsrpi/nr_journal_v114/install/quad_mpc/lib/python3.10/site-packages:/home/evannsrpi/nr_journal_v114/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/evannsrpi/nr_journal_v114/build/quad_mpc/build --no-deps symlink_data
+[7.265s] running develop
+[8.328s] running egg_info
+[8.328s] creating quad_mpc.egg-info
+[8.329s] writing quad_mpc.egg-info/PKG-INFO
+[8.329s] writing dependency_links to quad_mpc.egg-info/dependency_links.txt
+[8.329s] writing entry points to quad_mpc.egg-info/entry_points.txt
+[8.330s] writing requirements to quad_mpc.egg-info/requires.txt
+[8.330s] writing top-level names to quad_mpc.egg-info/top_level.txt
+[8.331s] writing manifest file 'quad_mpc.egg-info/SOURCES.txt'
+[8.332s] reading manifest file 'quad_mpc.egg-info/SOURCES.txt'
+[8.336s] writing manifest file 'quad_mpc.egg-info/SOURCES.txt'
+[8.581s] running build_ext
+[8.582s] Creating /home/evannsrpi/nr_journal_v114/install/quad_mpc/lib/python3.10/site-packages/quad-mpc.egg-link (link to .)
+[8.586s] Installing mpc_quad script to /home/evannsrpi/nr_journal_v114/install/quad_mpc/lib/quad_mpc
+[8.589s] 
+[8.589s] Installed /home/evannsrpi/nr_journal_v114/build/quad_mpc
+[8.594s] running symlink_data
+[8.598s] creating /home/evannsrpi/nr_journal_v114/install/quad_mpc/share/ament_index
+[8.602s] creating /home/evannsrpi/nr_journal_v114/install/quad_mpc/share/ament_index/resource_index
+[8.608s] creating /home/evannsrpi/nr_journal_v114/install/quad_mpc/share/ament_index/resource_index/packages
+[8.610s] symbolically linking /home/evannsrpi/nr_journal_v114/build/quad_mpc/resource/quad_mpc -> /home/evannsrpi/nr_journal_v114/install/quad_mpc/share/ament_index/resource_index/packages
+[8.614s] symbolically linking /home/evannsrpi/nr_journal_v114/build/quad_mpc/package.xml -> /home/evannsrpi/nr_journal_v114/install/quad_mpc/share/quad_mpc
+[8.887s] Invoked command in '/home/evannsrpi/nr_journal_v114/build/quad_mpc' returned '0': AMENT_PREFIX_PATH=/home/evannsrpi/nr_journal_v114/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/evannsrpi/nr_journal_v114/install/px4_msgs LD_LIBRARY_PATH=/home/evannsrpi/nr_journal_v114/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/evannsrpi/nr_journal_v114/build/quad_mpc/prefix_override:/home/evannsrpi/nr_journal_v114/install/quad_mpc/lib/python3.10/site-packages:/home/evannsrpi/nr_journal_v114/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/evannsrpi/nr_journal_v114/build/quad_mpc/build --no-deps symlink_data
