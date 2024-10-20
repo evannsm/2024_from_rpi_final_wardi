@@ -1,0 +1,173 @@
+[0.000000] (-) TimerEvent: {}
+[0.004048] (-) JobUnselected: {'identifier': 'px4_msgs'}
+[0.004391] (quad_mpc) JobQueued: {'identifier': 'quad_mpc', 'dependencies': OrderedDict([('px4_msgs', '/home/evannsrpi/nr_journal_v114/install/px4_msgs')])}
+[0.004661] (quad_newton_raphson) JobQueued: {'identifier': 'quad_newton_raphson', 'dependencies': OrderedDict([('px4_msgs', '/home/evannsrpi/nr_journal_v114/install/px4_msgs')])}
+[0.004891] (quad_mpc) JobStarted: {'identifier': 'quad_mpc'}
+[0.093993] (-) TimerEvent: {}
+[0.113526] (quad_newton_raphson) JobStarted: {'identifier': 'quad_newton_raphson'}
+[0.207863] (-) TimerEvent: {}
+[0.311583] (-) TimerEvent: {}
+[0.413094] (-) TimerEvent: {}
+[0.514996] (-) TimerEvent: {}
+[0.616127] (-) TimerEvent: {}
+[0.717075] (-) TimerEvent: {}
+[0.818340] (-) TimerEvent: {}
+[0.919865] (-) TimerEvent: {}
+[1.020748] (-) TimerEvent: {}
+[1.122264] (-) TimerEvent: {}
+[1.224521] (-) TimerEvent: {}
+[1.325488] (-) TimerEvent: {}
+[1.426545] (-) TimerEvent: {}
+[1.527646] (-) TimerEvent: {}
+[1.629041] (-) TimerEvent: {}
+[1.730484] (-) TimerEvent: {}
+[1.831371] (-) TimerEvent: {}
+[1.932290] (-) TimerEvent: {}
+[2.033248] (-) TimerEvent: {}
+[2.134217] (-) TimerEvent: {}
+[2.235510] (-) TimerEvent: {}
+[2.338696] (-) TimerEvent: {}
+[2.439969] (-) TimerEvent: {}
+[2.541049] (-) TimerEvent: {}
+[2.642240] (-) TimerEvent: {}
+[2.743329] (-) TimerEvent: {}
+[2.844474] (-) TimerEvent: {}
+[2.947377] (-) TimerEvent: {}
+[3.048304] (-) TimerEvent: {}
+[3.149430] (-) TimerEvent: {}
+[3.251174] (-) TimerEvent: {}
+[3.352766] (-) TimerEvent: {}
+[3.454610] (-) TimerEvent: {}
+[3.555697] (-) TimerEvent: {}
+[3.656932] (-) TimerEvent: {}
+[3.760037] (-) TimerEvent: {}
+[3.860865] (-) TimerEvent: {}
+[3.961693] (-) TimerEvent: {}
+[4.062483] (-) TimerEvent: {}
+[4.163294] (-) TimerEvent: {}
+[4.264377] (-) TimerEvent: {}
+[4.366317] (-) TimerEvent: {}
+[4.467196] (-) TimerEvent: {}
+[4.568184] (-) TimerEvent: {}
+[4.668973] (-) TimerEvent: {}
+[4.769838] (-) TimerEvent: {}
+[4.873147] (-) TimerEvent: {}
+[4.974879] (-) TimerEvent: {}
+[5.078435] (-) TimerEvent: {}
+[5.179111] (-) TimerEvent: {}
+[5.279779] (-) TimerEvent: {}
+[5.380631] (-) TimerEvent: {}
+[5.484237] (-) TimerEvent: {}
+[5.586147] (-) TimerEvent: {}
+[5.686979] (-) TimerEvent: {}
+[5.787841] (-) TimerEvent: {}
+[5.888773] (-) TimerEvent: {}
+[5.989556] (-) TimerEvent: {}
+[6.090343] (-) TimerEvent: {}
+[6.191057] (-) TimerEvent: {}
+[6.291783] (-) TimerEvent: {}
+[6.392488] (-) TimerEvent: {}
+[6.493269] (-) TimerEvent: {}
+[6.593985] (-) TimerEvent: {}
+[6.694708] (-) TimerEvent: {}
+[6.795509] (-) TimerEvent: {}
+[6.896253] (-) TimerEvent: {}
+[6.997118] (-) TimerEvent: {}
+[7.097982] (-) TimerEvent: {}
+[7.198905] (-) TimerEvent: {}
+[7.300340] (-) TimerEvent: {}
+[7.401710] (-) TimerEvent: {}
+[7.502609] (-) TimerEvent: {}
+[7.603344] (-) TimerEvent: {}
+[7.704547] (-) TimerEvent: {}
+[7.806667] (-) TimerEvent: {}
+[7.907544] (-) TimerEvent: {}
+[8.008311] (-) TimerEvent: {}
+[8.109319] (-) TimerEvent: {}
+[8.210939] (-) TimerEvent: {}
+[8.311955] (-) TimerEvent: {}
+[8.413154] (-) TimerEvent: {}
+[8.514465] (-) TimerEvent: {}
+[8.617363] (-) TimerEvent: {}
+[8.720048] (-) TimerEvent: {}
+[8.772187] (quad_newton_raphson) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/evannsrpi/nr_journal_v114/build/quad_newton_raphson/build', '--no-deps', 'symlink_data'], 'cwd': '/home/evannsrpi/nr_journal_v114/build/quad_newton_raphson', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'evannsrpi', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/evannsrpi/nr_journal_v114/install/px4_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/home/evannsrpi/acados/lib', 'ACADOS_SOURCE_DIR': '/home/evannsrpi/acados/', 'HOME': '/home/evannsrpi', 'CONDA_SHLVL': '0', 'OLDPWD': '/home/evannsrpi/nr_journal_v114/src', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '4086', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', '_CE_M': '', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'humble', 'LOGNAME': 'evannsrpi', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'evannsrpi', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', '_CE_CONDA': '', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/evannsrpi/miniforge3/condabin:/opt/ros/humble/bin:/home/evannsrpi/.cargo/bin:/home/evannsrpi/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/evannsrpi-desktop:@/tmp/.ICE-unix/1687,unix/evannsrpi-desktop:/tmp/.ICE-unix/1687', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/319f8c31_4057_40d9_995b_d6139be8a96d', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.3G1VV2', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.128', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '31', 'AMENT_PREFIX_PATH': '/home/evannsrpi/nr_journal_v114/install/px4_msgs:/opt/ros/humble', 'CONDA_PYTHON_EXE': '/home/evannsrpi/miniforge3/bin/python', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/evannsrpi/nr_journal_v114/build/quad_newton_raphson', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'CONDA_EXE': '/home/evannsrpi/miniforge3/bin/conda', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/evannsrpi/nr_journal_v114/build/quad_newton_raphson/prefix_override:/home/evannsrpi/nr_journal_v114/install/quad_newton_raphson/lib/python3.10/site-packages:/home/evannsrpi/nr_journal_v114/install/px4_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800', 'CMAKE_PREFIX_PATH': '/home/evannsrpi/nr_journal_v114/install/px4_msgs'}, 'shell': False}
+[8.793187] (quad_mpc) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/evannsrpi/nr_journal_v114/build/quad_mpc/build', '--no-deps', 'symlink_data'], 'cwd': '/home/evannsrpi/nr_journal_v114/build/quad_mpc', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'evannsrpi', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/evannsrpi/nr_journal_v114/install/px4_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/home/evannsrpi/acados/lib', 'ACADOS_SOURCE_DIR': '/home/evannsrpi/acados/', 'HOME': '/home/evannsrpi', 'CONDA_SHLVL': '0', 'OLDPWD': '/home/evannsrpi/nr_journal_v114/src', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '4086', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', '_CE_M': '', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'humble', 'LOGNAME': 'evannsrpi', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'evannsrpi', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', '_CE_CONDA': '', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/evannsrpi/miniforge3/condabin:/opt/ros/humble/bin:/home/evannsrpi/.cargo/bin:/home/evannsrpi/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/evannsrpi-desktop:@/tmp/.ICE-unix/1687,unix/evannsrpi-desktop:/tmp/.ICE-unix/1687', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/319f8c31_4057_40d9_995b_d6139be8a96d', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.3G1VV2', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.128', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '31', 'AMENT_PREFIX_PATH': '/home/evannsrpi/nr_journal_v114/install/px4_msgs:/opt/ros/humble', 'CONDA_PYTHON_EXE': '/home/evannsrpi/miniforge3/bin/python', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/evannsrpi/nr_journal_v114/build/quad_mpc', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'CONDA_EXE': '/home/evannsrpi/miniforge3/bin/conda', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/evannsrpi/nr_journal_v114/build/quad_mpc/prefix_override:/home/evannsrpi/nr_journal_v114/install/quad_mpc/lib/python3.10/site-packages:/home/evannsrpi/nr_journal_v114/install/px4_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800', 'CMAKE_PREFIX_PATH': '/home/evannsrpi/nr_journal_v114/install/px4_msgs'}, 'shell': False}
+[8.820193] (-) TimerEvent: {}
+[8.921107] (-) TimerEvent: {}
+[9.021941] (-) TimerEvent: {}
+[9.122911] (-) TimerEvent: {}
+[9.223831] (-) TimerEvent: {}
+[9.324669] (-) TimerEvent: {}
+[9.425539] (-) TimerEvent: {}
+[9.526274] (-) TimerEvent: {}
+[9.626995] (-) TimerEvent: {}
+[9.727793] (-) TimerEvent: {}
+[9.828675] (-) TimerEvent: {}
+[9.929584] (-) TimerEvent: {}
+[10.030416] (-) TimerEvent: {}
+[10.131252] (-) TimerEvent: {}
+[10.232374] (-) TimerEvent: {}
+[10.333830] (-) TimerEvent: {}
+[10.393513] (quad_mpc) StdoutLine: {'line': b'running develop\n'}
+[10.394592] (quad_newton_raphson) StdoutLine: {'line': b'running develop\n'}
+[10.433995] (-) TimerEvent: {}
+[10.534902] (-) TimerEvent: {}
+[10.637106] (-) TimerEvent: {}
+[10.738519] (-) TimerEvent: {}
+[10.840143] (-) TimerEvent: {}
+[10.941094] (-) TimerEvent: {}
+[11.041886] (-) TimerEvent: {}
+[11.142831] (-) TimerEvent: {}
+[11.245247] (-) TimerEvent: {}
+[11.347601] (-) TimerEvent: {}
+[11.455333] (-) TimerEvent: {}
+[11.557790] (-) TimerEvent: {}
+[11.659279] (-) TimerEvent: {}
+[11.760991] (-) TimerEvent: {}
+[11.863397] (-) TimerEvent: {}
+[11.969131] (-) TimerEvent: {}
+[12.070097] (-) TimerEvent: {}
+[12.173126] (-) TimerEvent: {}
+[12.274275] (-) TimerEvent: {}
+[12.342751] (quad_mpc) StdoutLine: {'line': b'running egg_info\n'}
+[12.346248] (quad_mpc) StdoutLine: {'line': b'writing quad_mpc.egg-info/PKG-INFO\n'}
+[12.348783] (quad_mpc) StdoutLine: {'line': b'writing dependency_links to quad_mpc.egg-info/dependency_links.txt\n'}
+[12.350981] (quad_mpc) StdoutLine: {'line': b'writing entry points to quad_mpc.egg-info/entry_points.txt\n'}
+[12.352118] (quad_newton_raphson) StdoutLine: {'line': b'running egg_info\n'}
+[12.353736] (quad_mpc) StdoutLine: {'line': b'writing requirements to quad_mpc.egg-info/requires.txt\n'}
+[12.355230] (quad_newton_raphson) StdoutLine: {'line': b'writing quad_newton_raphson.egg-info/PKG-INFO\n'}
+[12.356319] (quad_mpc) StdoutLine: {'line': b'writing top-level names to quad_mpc.egg-info/top_level.txt\n'}
+[12.357510] (quad_newton_raphson) StdoutLine: {'line': b'writing dependency_links to quad_newton_raphson.egg-info/dependency_links.txt\n'}
+[12.358845] (quad_newton_raphson) StdoutLine: {'line': b'writing entry points to quad_newton_raphson.egg-info/entry_points.txt\n'}
+[12.361609] (quad_newton_raphson) StdoutLine: {'line': b'writing requirements to quad_newton_raphson.egg-info/requires.txt\n'}
+[12.362377] (quad_newton_raphson) StdoutLine: {'line': b'writing top-level names to quad_newton_raphson.egg-info/top_level.txt\n'}
+[12.369819] (quad_mpc) StdoutLine: {'line': b"reading manifest file 'quad_mpc.egg-info/SOURCES.txt'\n"}
+[12.370453] (quad_newton_raphson) StdoutLine: {'line': b"reading manifest file 'quad_newton_raphson.egg-info/SOURCES.txt'\n"}
+[12.374599] (-) TimerEvent: {}
+[12.378478] (quad_newton_raphson) StdoutLine: {'line': b"writing manifest file 'quad_newton_raphson.egg-info/SOURCES.txt'\n"}
+[12.379471] (quad_mpc) StdoutLine: {'line': b"writing manifest file 'quad_mpc.egg-info/SOURCES.txt'\n"}
+[12.475040] (-) TimerEvent: {}
+[12.578728] (-) TimerEvent: {}
+[12.665116] (quad_newton_raphson) StdoutLine: {'line': b'running build_ext\n'}
+[12.665702] (quad_newton_raphson) StdoutLine: {'line': b'Creating /home/evannsrpi/nr_journal_v114/install/quad_newton_raphson/lib/python3.10/site-packages/quad-newton-raphson.egg-link (link to .)\n'}
+[12.669244] (quad_newton_raphson) StdoutLine: {'line': b'Installing nr_quad script to /home/evannsrpi/nr_journal_v114/install/quad_newton_raphson/lib/quad_newton_raphson\n'}
+[12.670584] (quad_newton_raphson) StdoutLine: {'line': b'\n'}
+[12.671218] (quad_newton_raphson) StdoutLine: {'line': b'Installed /home/evannsrpi/nr_journal_v114/build/quad_newton_raphson\n'}
+[12.671984] (quad_newton_raphson) StdoutLine: {'line': b'running symlink_data\n'}
+[12.675113] (quad_mpc) StdoutLine: {'line': b'running build_ext\n'}
+[12.675838] (quad_mpc) StdoutLine: {'line': b'Creating /home/evannsrpi/nr_journal_v114/install/quad_mpc/lib/python3.10/site-packages/quad-mpc.egg-link (link to .)\n'}
+[12.679136] (-) TimerEvent: {}
+[12.681622] (quad_mpc) StdoutLine: {'line': b'Installing mpc_quad script to /home/evannsrpi/nr_journal_v114/install/quad_mpc/lib/quad_mpc\n'}
+[12.685155] (quad_mpc) StdoutLine: {'line': b'\n'}
+[12.687546] (quad_mpc) StdoutLine: {'line': b'Installed /home/evannsrpi/nr_journal_v114/build/quad_mpc\n'}
+[12.692476] (quad_mpc) StdoutLine: {'line': b'running symlink_data\n'}
+[12.779579] (-) TimerEvent: {}
+[12.882209] (-) TimerEvent: {}
+[12.985281] (-) TimerEvent: {}
+[13.038966] (quad_mpc) CommandEnded: {'returncode': 0}
+[13.085482] (-) TimerEvent: {}
+[13.151857] (quad_mpc) JobEnded: {'identifier': 'quad_mpc', 'rc': 0}
+[13.159081] (quad_newton_raphson) CommandEnded: {'returncode': 0}
+[13.185991] (-) TimerEvent: {}
+[13.213688] (quad_newton_raphson) JobEnded: {'identifier': 'quad_newton_raphson', 'rc': 0}
+[13.217511] (-) EventReactorShutdown: {}

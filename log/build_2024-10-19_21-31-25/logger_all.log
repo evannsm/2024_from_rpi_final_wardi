@@ -1,0 +1,195 @@
+[0.476s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'quad_mpc', 'quad_newton_raphson', '--symlink-install']
+[0.476s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['quad_mpc', 'quad_newton_raphson'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0xffffbca00d90>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffffbcb41b10>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffffbcb41b10>>, mixin_verb=('build',))
+[1.390s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[1.391s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[1.391s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[1.391s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[1.391s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[1.391s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[1.391s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/evannsrpi/nr_journal_v114'
+[1.392s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[1.392s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[1.392s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[1.393s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[1.393s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[1.393s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[1.393s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[1.393s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[1.393s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[1.438s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[1.438s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[1.438s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[1.438s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[1.439s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[1.439s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[1.441s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[1.441s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[1.442s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[1.442s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[1.443s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[1.443s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[1.443s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[1.444s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[1.444s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[1.444s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[1.444s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[1.445s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[1.445s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[1.445s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[1.445s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[1.445s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[1.445s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[1.446s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[1.446s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[1.446s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[1.446s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[1.446s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[1.447s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extensions ['ignore', 'ignore_ament_install']
+[1.447s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extension 'ignore'
+[1.447s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extension 'ignore_ament_install'
+[1.448s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extensions ['colcon_pkg']
+[1.448s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extension 'colcon_pkg'
+[1.448s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extensions ['colcon_meta']
+[1.448s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extension 'colcon_meta'
+[1.448s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extensions ['ros']
+[1.448s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extension 'ros'
+[1.458s] DEBUG:colcon.colcon_core.package_identification:Package 'src/px4_msgs' with type 'ros.ament_cmake' and name 'px4_msgs'
+[1.459s] Level 1:colcon.colcon_core.package_identification:_identify(src/quad_mpc) by extensions ['ignore', 'ignore_ament_install']
+[1.459s] Level 1:colcon.colcon_core.package_identification:_identify(src/quad_mpc) by extension 'ignore'
+[1.460s] Level 1:colcon.colcon_core.package_identification:_identify(src/quad_mpc) by extension 'ignore_ament_install'
+[1.460s] Level 1:colcon.colcon_core.package_identification:_identify(src/quad_mpc) by extensions ['colcon_pkg']
+[1.460s] Level 1:colcon.colcon_core.package_identification:_identify(src/quad_mpc) by extension 'colcon_pkg'
+[1.460s] Level 1:colcon.colcon_core.package_identification:_identify(src/quad_mpc) by extensions ['colcon_meta']
+[1.460s] Level 1:colcon.colcon_core.package_identification:_identify(src/quad_mpc) by extension 'colcon_meta'
+[1.461s] Level 1:colcon.colcon_core.package_identification:_identify(src/quad_mpc) by extensions ['ros']
+[1.461s] Level 1:colcon.colcon_core.package_identification:_identify(src/quad_mpc) by extension 'ros'
+[1.464s] DEBUG:colcon.colcon_core.package_identification:Package 'src/quad_mpc' with type 'ros.ament_python' and name 'quad_mpc'
+[1.465s] Level 1:colcon.colcon_core.package_identification:_identify(src/quad_newton_raphson) by extensions ['ignore', 'ignore_ament_install']
+[1.465s] Level 1:colcon.colcon_core.package_identification:_identify(src/quad_newton_raphson) by extension 'ignore'
+[1.465s] Level 1:colcon.colcon_core.package_identification:_identify(src/quad_newton_raphson) by extension 'ignore_ament_install'
+[1.466s] Level 1:colcon.colcon_core.package_identification:_identify(src/quad_newton_raphson) by extensions ['colcon_pkg']
+[1.466s] Level 1:colcon.colcon_core.package_identification:_identify(src/quad_newton_raphson) by extension 'colcon_pkg'
+[1.466s] Level 1:colcon.colcon_core.package_identification:_identify(src/quad_newton_raphson) by extensions ['colcon_meta']
+[1.466s] Level 1:colcon.colcon_core.package_identification:_identify(src/quad_newton_raphson) by extension 'colcon_meta'
+[1.466s] Level 1:colcon.colcon_core.package_identification:_identify(src/quad_newton_raphson) by extensions ['ros']
+[1.466s] Level 1:colcon.colcon_core.package_identification:_identify(src/quad_newton_raphson) by extension 'ros'
+[1.469s] DEBUG:colcon.colcon_core.package_identification:Package 'src/quad_newton_raphson' with type 'ros.ament_python' and name 'quad_newton_raphson'
+[1.469s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[1.470s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[1.470s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[1.470s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[1.470s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[1.588s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'px4_msgs' in 'src/px4_msgs'
+[1.590s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[1.590s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[1.604s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 270 installed packages in /opt/ros/humble
+[1.610s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[1.775s] Level 5:colcon.colcon_core.verb:set package 'quad_mpc' build argument 'cmake_args' from command line to 'None'
+[1.776s] Level 5:colcon.colcon_core.verb:set package 'quad_mpc' build argument 'cmake_target' from command line to 'None'
+[1.776s] Level 5:colcon.colcon_core.verb:set package 'quad_mpc' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.776s] Level 5:colcon.colcon_core.verb:set package 'quad_mpc' build argument 'cmake_clean_cache' from command line to 'False'
+[1.776s] Level 5:colcon.colcon_core.verb:set package 'quad_mpc' build argument 'cmake_clean_first' from command line to 'False'
+[1.776s] Level 5:colcon.colcon_core.verb:set package 'quad_mpc' build argument 'cmake_force_configure' from command line to 'False'
+[1.776s] Level 5:colcon.colcon_core.verb:set package 'quad_mpc' build argument 'ament_cmake_args' from command line to 'None'
+[1.776s] Level 5:colcon.colcon_core.verb:set package 'quad_mpc' build argument 'catkin_cmake_args' from command line to 'None'
+[1.776s] Level 5:colcon.colcon_core.verb:set package 'quad_mpc' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.777s] DEBUG:colcon.colcon_core.verb:Building package 'quad_mpc' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/evannsrpi/nr_journal_v114/build/quad_mpc', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/evannsrpi/nr_journal_v114/install/quad_mpc', 'merge_install': False, 'path': '/home/evannsrpi/nr_journal_v114/src/quad_mpc', 'symlink_install': True, 'test_result_base': None}
+[1.778s] Level 5:colcon.colcon_core.verb:set package 'quad_newton_raphson' build argument 'cmake_args' from command line to 'None'
+[1.778s] Level 5:colcon.colcon_core.verb:set package 'quad_newton_raphson' build argument 'cmake_target' from command line to 'None'
+[1.779s] Level 5:colcon.colcon_core.verb:set package 'quad_newton_raphson' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.779s] Level 5:colcon.colcon_core.verb:set package 'quad_newton_raphson' build argument 'cmake_clean_cache' from command line to 'False'
+[1.779s] Level 5:colcon.colcon_core.verb:set package 'quad_newton_raphson' build argument 'cmake_clean_first' from command line to 'False'
+[1.779s] Level 5:colcon.colcon_core.verb:set package 'quad_newton_raphson' build argument 'cmake_force_configure' from command line to 'False'
+[1.779s] Level 5:colcon.colcon_core.verb:set package 'quad_newton_raphson' build argument 'ament_cmake_args' from command line to 'None'
+[1.779s] Level 5:colcon.colcon_core.verb:set package 'quad_newton_raphson' build argument 'catkin_cmake_args' from command line to 'None'
+[1.779s] Level 5:colcon.colcon_core.verb:set package 'quad_newton_raphson' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.779s] DEBUG:colcon.colcon_core.verb:Building package 'quad_newton_raphson' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/evannsrpi/nr_journal_v114/build/quad_newton_raphson', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/evannsrpi/nr_journal_v114/install/quad_newton_raphson', 'merge_install': False, 'path': '/home/evannsrpi/nr_journal_v114/src/quad_newton_raphson', 'symlink_install': True, 'test_result_base': None}
+[1.780s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.783s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.784s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/evannsrpi/nr_journal_v114/src/quad_mpc' with build type 'ament_python'
+[1.785s] Level 1:colcon.colcon_core.shell:create_environment_hook('quad_mpc', 'ament_prefix_path')
+[1.793s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.794s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/evannsrpi/nr_journal_v114/install/quad_mpc/share/quad_mpc/hook/ament_prefix_path.ps1'
+[1.797s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/evannsrpi/nr_journal_v114/install/quad_mpc/share/quad_mpc/hook/ament_prefix_path.dsv'
+[1.800s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/evannsrpi/nr_journal_v114/install/quad_mpc/share/quad_mpc/hook/ament_prefix_path.sh'
+[1.804s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.804s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.823s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/evannsrpi/nr_journal_v114/src/quad_newton_raphson' with build type 'ament_python'
+[1.824s] Level 1:colcon.colcon_core.shell:create_environment_hook('quad_newton_raphson', 'ament_prefix_path')
+[1.826s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/evannsrpi/nr_journal_v114/install/quad_newton_raphson/share/quad_newton_raphson/hook/ament_prefix_path.ps1'
+[1.829s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/evannsrpi/nr_journal_v114/install/quad_newton_raphson/share/quad_newton_raphson/hook/ament_prefix_path.dsv'
+[1.832s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/evannsrpi/nr_journal_v114/install/quad_newton_raphson/share/quad_newton_raphson/hook/ament_prefix_path.sh'
+[1.835s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.836s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.220s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/evannsrpi/nr_journal_v114/src/quad_mpc'
+[3.221s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.221s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.581s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/evannsrpi/nr_journal_v114/src/quad_newton_raphson'
+[4.582s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.582s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[7.108s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/evannsrpi/nr_journal_v114/build/quad_mpc': AMENT_PREFIX_PATH=/home/evannsrpi/nr_journal_v114/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/evannsrpi/nr_journal_v114/install/px4_msgs LD_LIBRARY_PATH=/home/evannsrpi/nr_journal_v114/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/evannsrpi/nr_journal_v114/build/quad_mpc/prefix_override:/home/evannsrpi/nr_journal_v114/install/quad_mpc/lib/python3.10/site-packages:/home/evannsrpi/nr_journal_v114/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/evannsrpi/nr_journal_v114/build/quad_mpc/build --no-deps symlink_data
+[7.124s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/evannsrpi/nr_journal_v114/build/quad_newton_raphson': AMENT_PREFIX_PATH=/home/evannsrpi/nr_journal_v114/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/evannsrpi/nr_journal_v114/install/px4_msgs LD_LIBRARY_PATH=/home/evannsrpi/nr_journal_v114/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/evannsrpi/nr_journal_v114/build/quad_newton_raphson/prefix_override:/home/evannsrpi/nr_journal_v114/install/quad_newton_raphson/lib/python3.10/site-packages:/home/evannsrpi/nr_journal_v114/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/evannsrpi/nr_journal_v114/build/quad_newton_raphson/build --no-deps symlink_data
+[10.393s] Level 1:colcon.colcon_core.shell:create_environment_hook('quad_mpc', 'pythonpath_develop')
+[10.395s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/evannsrpi/nr_journal_v114/build/quad_mpc/share/quad_mpc/hook/pythonpath_develop.ps1'
+[10.399s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/evannsrpi/nr_journal_v114/build/quad_mpc/share/quad_mpc/hook/pythonpath_develop.dsv'
+[10.403s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/evannsrpi/nr_journal_v114/build/quad_mpc' returned '0': AMENT_PREFIX_PATH=/home/evannsrpi/nr_journal_v114/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/evannsrpi/nr_journal_v114/install/px4_msgs LD_LIBRARY_PATH=/home/evannsrpi/nr_journal_v114/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/evannsrpi/nr_journal_v114/build/quad_mpc/prefix_override:/home/evannsrpi/nr_journal_v114/install/quad_mpc/lib/python3.10/site-packages:/home/evannsrpi/nr_journal_v114/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/evannsrpi/nr_journal_v114/build/quad_mpc/build --no-deps symlink_data
+[10.404s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/evannsrpi/nr_journal_v114/build/quad_mpc/share/quad_mpc/hook/pythonpath_develop.sh'
+[10.428s] Level 1:colcon.colcon_core.environment:checking '/home/evannsrpi/nr_journal_v114/install/quad_mpc' for CMake module files
+[10.431s] Level 1:colcon.colcon_core.environment:checking '/home/evannsrpi/nr_journal_v114/install/quad_mpc' for CMake config files
+[10.436s] Level 1:colcon.colcon_core.environment:checking '/home/evannsrpi/nr_journal_v114/install/quad_mpc/lib'
+[10.437s] Level 1:colcon.colcon_core.environment:checking '/home/evannsrpi/nr_journal_v114/install/quad_mpc/bin'
+[10.437s] Level 1:colcon.colcon_core.environment:checking '/home/evannsrpi/nr_journal_v114/install/quad_mpc/lib/pkgconfig/quad_mpc.pc'
+[10.439s] Level 1:colcon.colcon_core.environment:checking '/home/evannsrpi/nr_journal_v114/install/quad_mpc/lib/python3.10/site-packages'
+[10.439s] Level 1:colcon.colcon_core.shell:create_environment_hook('quad_mpc', 'pythonpath')
+[10.440s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/evannsrpi/nr_journal_v114/install/quad_mpc/share/quad_mpc/hook/pythonpath.ps1'
+[10.442s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/evannsrpi/nr_journal_v114/install/quad_mpc/share/quad_mpc/hook/pythonpath.dsv'
+[10.444s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/evannsrpi/nr_journal_v114/install/quad_mpc/share/quad_mpc/hook/pythonpath.sh'
+[10.446s] Level 1:colcon.colcon_core.environment:checking '/home/evannsrpi/nr_journal_v114/install/quad_mpc/bin'
+[10.447s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(quad_mpc)
+[10.448s] INFO:colcon.colcon_core.shell:Creating package script '/home/evannsrpi/nr_journal_v114/install/quad_mpc/share/quad_mpc/package.ps1'
+[10.452s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/evannsrpi/nr_journal_v114/install/quad_mpc/share/quad_mpc/package.dsv'
+[10.454s] INFO:colcon.colcon_core.shell:Creating package script '/home/evannsrpi/nr_journal_v114/install/quad_mpc/share/quad_mpc/package.sh'
+[10.459s] INFO:colcon.colcon_core.shell:Creating package script '/home/evannsrpi/nr_journal_v114/install/quad_mpc/share/quad_mpc/package.bash'
+[10.462s] INFO:colcon.colcon_core.shell:Creating package script '/home/evannsrpi/nr_journal_v114/install/quad_mpc/share/quad_mpc/package.zsh'
+[10.465s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/evannsrpi/nr_journal_v114/install/quad_mpc/share/colcon-core/packages/quad_mpc)
+[10.469s] Level 1:colcon.colcon_core.shell:create_environment_hook('quad_newton_raphson', 'pythonpath_develop')
+[10.470s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/evannsrpi/nr_journal_v114/build/quad_newton_raphson/share/quad_newton_raphson/hook/pythonpath_develop.ps1'
+[10.473s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/evannsrpi/nr_journal_v114/build/quad_newton_raphson' returned '0': AMENT_PREFIX_PATH=/home/evannsrpi/nr_journal_v114/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/evannsrpi/nr_journal_v114/install/px4_msgs LD_LIBRARY_PATH=/home/evannsrpi/nr_journal_v114/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/evannsrpi/nr_journal_v114/build/quad_newton_raphson/prefix_override:/home/evannsrpi/nr_journal_v114/install/quad_newton_raphson/lib/python3.10/site-packages:/home/evannsrpi/nr_journal_v114/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/evannsrpi/nr_journal_v114/build/quad_newton_raphson/build --no-deps symlink_data
+[10.474s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/evannsrpi/nr_journal_v114/build/quad_newton_raphson/share/quad_newton_raphson/hook/pythonpath_develop.dsv'
+[10.476s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/evannsrpi/nr_journal_v114/build/quad_newton_raphson/share/quad_newton_raphson/hook/pythonpath_develop.sh'
+[10.479s] Level 1:colcon.colcon_core.environment:checking '/home/evannsrpi/nr_journal_v114/install/quad_newton_raphson' for CMake module files
+[10.481s] Level 1:colcon.colcon_core.environment:checking '/home/evannsrpi/nr_journal_v114/install/quad_newton_raphson' for CMake config files
+[10.486s] Level 1:colcon.colcon_core.environment:checking '/home/evannsrpi/nr_journal_v114/install/quad_newton_raphson/lib'
+[10.486s] Level 1:colcon.colcon_core.environment:checking '/home/evannsrpi/nr_journal_v114/install/quad_newton_raphson/bin'
+[10.487s] Level 1:colcon.colcon_core.environment:checking '/home/evannsrpi/nr_journal_v114/install/quad_newton_raphson/lib/pkgconfig/quad_newton_raphson.pc'
+[10.489s] Level 1:colcon.colcon_core.environment:checking '/home/evannsrpi/nr_journal_v114/install/quad_newton_raphson/lib/python3.10/site-packages'
+[10.489s] Level 1:colcon.colcon_core.shell:create_environment_hook('quad_newton_raphson', 'pythonpath')
+[10.490s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/evannsrpi/nr_journal_v114/install/quad_newton_raphson/share/quad_newton_raphson/hook/pythonpath.ps1'
+[10.495s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/evannsrpi/nr_journal_v114/install/quad_newton_raphson/share/quad_newton_raphson/hook/pythonpath.dsv'
+[10.498s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/evannsrpi/nr_journal_v114/install/quad_newton_raphson/share/quad_newton_raphson/hook/pythonpath.sh'
+[10.500s] Level 1:colcon.colcon_core.environment:checking '/home/evannsrpi/nr_journal_v114/install/quad_newton_raphson/bin'
+[10.500s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(quad_newton_raphson)
+[10.502s] INFO:colcon.colcon_core.shell:Creating package script '/home/evannsrpi/nr_journal_v114/install/quad_newton_raphson/share/quad_newton_raphson/package.ps1'
+[10.504s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/evannsrpi/nr_journal_v114/install/quad_newton_raphson/share/quad_newton_raphson/package.dsv'
+[10.507s] INFO:colcon.colcon_core.shell:Creating package script '/home/evannsrpi/nr_journal_v114/install/quad_newton_raphson/share/quad_newton_raphson/package.sh'
+[10.510s] INFO:colcon.colcon_core.shell:Creating package script '/home/evannsrpi/nr_journal_v114/install/quad_newton_raphson/share/quad_newton_raphson/package.bash'
+[10.511s] INFO:colcon.colcon_core.shell:Creating package script '/home/evannsrpi/nr_journal_v114/install/quad_newton_raphson/share/quad_newton_raphson/package.zsh'
+[10.513s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/evannsrpi/nr_journal_v114/install/quad_newton_raphson/share/colcon-core/packages/quad_newton_raphson)
+[10.515s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[10.516s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[10.516s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[10.517s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[10.543s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[10.544s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[10.545s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[10.603s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[10.605s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/evannsrpi/nr_journal_v114/install/local_setup.ps1'
+[10.609s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/evannsrpi/nr_journal_v114/install/_local_setup_util_ps1.py'
+[10.616s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/evannsrpi/nr_journal_v114/install/setup.ps1'
+[10.621s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/evannsrpi/nr_journal_v114/install/local_setup.sh'
+[10.624s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/evannsrpi/nr_journal_v114/install/_local_setup_util_sh.py'
+[10.627s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/evannsrpi/nr_journal_v114/install/setup.sh'
+[10.632s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/evannsrpi/nr_journal_v114/install/local_setup.bash'
+[10.635s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/evannsrpi/nr_journal_v114/install/setup.bash'
+[10.640s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/evannsrpi/nr_journal_v114/install/local_setup.zsh'
+[10.643s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/evannsrpi/nr_journal_v114/install/setup.zsh'

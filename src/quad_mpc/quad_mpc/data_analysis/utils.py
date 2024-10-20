@@ -76,6 +76,8 @@ def make_plot(df):
     axs[1, 0].plot(df['x_ref'], df['y_ref'], label='x_ref vs y_ref', color='blue', linestyle='--')
     axs[1, 0].set_ylabel('y')
     axs[1, 0].set_xlabel('x')
+    axs[1,0].set_ylim(-.5, .5)
+    axs[1, 0].set_xlim(-.5, .5)
     axs[1, 0].legend()
 
     # plot x vs z and x_ref vs z_ref

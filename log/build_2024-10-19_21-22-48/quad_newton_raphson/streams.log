@@ -1,0 +1,17 @@
+[8.662s] Invoking command in '/home/evannsrpi/nr_journal_v114/build/quad_newton_raphson': AMENT_PREFIX_PATH=/home/evannsrpi/nr_journal_v114/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/evannsrpi/nr_journal_v114/install/px4_msgs LD_LIBRARY_PATH=/home/evannsrpi/nr_journal_v114/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/evannsrpi/nr_journal_v114/build/quad_newton_raphson/prefix_override:/home/evannsrpi/nr_journal_v114/install/quad_newton_raphson/lib/python3.10/site-packages:/home/evannsrpi/nr_journal_v114/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/evannsrpi/nr_journal_v114/build/quad_newton_raphson/build --no-deps symlink_data
+[10.281s] running develop
+[12.240s] running egg_info
+[12.242s] writing quad_newton_raphson.egg-info/PKG-INFO
+[12.245s] writing dependency_links to quad_newton_raphson.egg-info/dependency_links.txt
+[12.248s] writing entry points to quad_newton_raphson.egg-info/entry_points.txt
+[12.248s] writing requirements to quad_newton_raphson.egg-info/requires.txt
+[12.249s] writing top-level names to quad_newton_raphson.egg-info/top_level.txt
+[12.257s] reading manifest file 'quad_newton_raphson.egg-info/SOURCES.txt'
+[12.265s] writing manifest file 'quad_newton_raphson.egg-info/SOURCES.txt'
+[12.552s] running build_ext
+[12.552s] Creating /home/evannsrpi/nr_journal_v114/install/quad_newton_raphson/lib/python3.10/site-packages/quad-newton-raphson.egg-link (link to .)
+[12.557s] Installing nr_quad script to /home/evannsrpi/nr_journal_v114/install/quad_newton_raphson/lib/quad_newton_raphson
+[12.557s] 
+[12.558s] Installed /home/evannsrpi/nr_journal_v114/build/quad_newton_raphson
+[12.559s] running symlink_data
+[13.046s] Invoked command in '/home/evannsrpi/nr_journal_v114/build/quad_newton_raphson' returned '0': AMENT_PREFIX_PATH=/home/evannsrpi/nr_journal_v114/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/evannsrpi/nr_journal_v114/install/px4_msgs LD_LIBRARY_PATH=/home/evannsrpi/nr_journal_v114/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/evannsrpi/nr_journal_v114/build/quad_newton_raphson/prefix_override:/home/evannsrpi/nr_journal_v114/install/quad_newton_raphson/lib/python3.10/site-packages:/home/evannsrpi/nr_journal_v114/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/evannsrpi/nr_journal_v114/build/quad_newton_raphson/build --no-deps symlink_data

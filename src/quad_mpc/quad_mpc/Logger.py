@@ -26,7 +26,8 @@ class Logger:
                             'x', 'y', 'z', 'yaw',
                             'throttle', 'roll_rate', 'pitch_rate', 'yaw_rate',
                             'x_ref', 'y_ref', 'z_ref', 'yaw_ref',
-                            'mpc_time','metadata'
+                            'mpc_time', 'ctrl_callback_time_history',
+                            'metadata'
                             ])
             
             time_history = ControlNode.get_ctrl_loop_time_log()
@@ -43,6 +44,7 @@ class Logger:
             ref_z_history = ControlNode.get_ref_z_log()
             ref_yaw_history = ControlNode.get_ref_yaw_log()
             mpc_time_history = ControlNode.get_mpc_timel_log()
+            ctrl_callback_time_history = ControlNode.get_ctrl_callback_timel_log() #15
             metadata = ControlNode.get_metadata()
             """
             def get_x_log(self): return np.array(self.x_log).reshape(-1, 1)
@@ -59,7 +61,9 @@ class Logger:
             def get_ref_yaw_log(self): return np.array(self.ref_yaw_log).reshape(-1, 1)
             def get_ctrl_loop_time_log(self): return np.array(self.ctrl_loop_time_log).reshape(-1, 1)
             def get_mpc_timel_log(self): return np.array(self.mpc_timel_array).reshape(-1, 1)
+            def get_ctrl_callback_timel_log(self): return np.array(self.ctrl_callback_timel_log).reshape(-1, 1)
             def get_metadata(self): return self.metadata.reshape(-1, 1)
+
             """
             
             # Pad the metadata to match the time history
@@ -72,7 +76,7 @@ class Logger:
                               x_history, y_history, z_history, yaw_history,
                               throttle_history, roll_history, pitch_history, yaw_rate_history,
                               ref_x_history, ref_y_history, ref_z_history, ref_yaw_history,
-                              mpc_time_history,
+                              mpc_time_history, ctrl_callback_time_history,
                               metadata
                               ))
             # Write each row to the CSV file

@@ -72,8 +72,9 @@ def make_plot(df):
 
 # Row 2: Plot cross comparisons (x vs y, x vs z, y vs z, time vs solve_time)
     # plot x vs y and x_ref vs y_ref
-    axs[1, 0].plot(df['x'], df['y'], label='x vs y', color='red')
-    axs[1, 0].plot(df['x_ref'], df['y_ref'], label='x_ref vs y_ref', color='blue', linestyle='--')
+    destime = -1
+    axs[1, 0].plot(df['x'][0:destime], df['y'][0:destime], label='x vs y', color='red')
+    axs[1, 0].plot(df['x_ref'][0:destime], df['y_ref'][0:destime], label='x_ref vs y_ref', color='blue', linestyle='--')
     axs[1, 0].set_ylabel('y')
     axs[1, 0].set_xlabel('x')
     axs[1, 0].legend()

@@ -52,23 +52,25 @@ class OffboardControl(Node):
         super().__init__('offboard_control_takeoff_and_land')
         self.mocap_k = -1
         self.full_rotations = 0
+        self.made_it = 0
 ###############################################################################################################################################
 
         # Figure out if in simulation or hardware mode to set important variables to the appropriate values
         self.sim = bool(int(input("Are you using the simulator? Write 1 for Sim and 0 for Hardware: ")))
         print(f"{'SIMULATION' if self.sim else 'HARDWARE'}")
+        self.double_speed = bool(int(input("Double Speed Trajectories? Press 1 for Yes and 0 for No: ")))
 
         self.ctrl_loop_time_log = []
         self.x_log, self.y_log, self.z_log, self.yaw_log = [], [], [], []
         self.throttle_log, self.roll_log, self.pitch_log, self.yaw_rate_log = [], [], [], []
         self.ref_x_log, self.ref_y_log, self.ref_z_log, self.ref_yaw_log = [], [], [], []
         self.mpc_timel_array = []
-
+        self.ctrl_callback_timel_log = []
 
         self.mode_channel = 5
         self.pyjoules_on = int(input("Use PyJoules? 1 for Yes 0 for No: ")) #False
         if self.pyjoules_on:
-            self.csv_handler = CSVHandler('mpc_cpu_energy_TESTERRORS.csv')
+            self.csv_handler = CSVHandler('mpc_cpu_energy.csv')
 ###############################################################################################################################################
 
         # Configure QoS profile for publishing and subscribing
@@ -112,7 +114,7 @@ class OffboardControl(Node):
 ###############################################################################################################################################
 
         # Initialize variables:  
-        self.cushion_time = 10.0
+        self.cushion_time = 5.0
         self.flight_time = 30.0
         self.time_before_land = self.flight_time + 2*(self.cushion_time)
         print(f"time_before_land: {self.time_before_land}")
@@ -150,6 +152,7 @@ class OffboardControl(Node):
 
 
         self.metadata = np.array(['Sim' if self.sim else 'Hardware',
+                                  '2x Speed' if self.double_speed else '1x Speed',
                                   'Horizon:'+str(horizon),
                                   'Num Steps:'+str(num_steps),
                                   'Pyjoules' if self.pyjoules_on else 'No Pyjoules',
@@ -480,8 +483,8 @@ class OffboardControl(Node):
                             print("\nDisarming and Exiting Program")
                             self.disarm()
                             print("\nSaving all data!")
-                            if self.pyjoules_on:
-                                self.csv_handler.save_data()
+                            # if self.pyjoules_on:
+                            #     self.csv_handler.save_data()
                             exit(0)
             print(f"--------------------------------------")
             print("\n\n")
@@ -491,6 +494,8 @@ class OffboardControl(Node):
     
 # ~~ From here down are the functions that actually calculate the control input ~~
     def controller(self): # Runs Algorithm Structure
+        t0 = time.time()
+        """MPC Controller Function."""
         print(f"NR States: {self.nr_state}") #prints current state
 
         if self.first_iteration:
@@ -513,7 +518,8 @@ class OffboardControl(Node):
             # reffunc = self.fig8_vert_ref_func_tall()
             # reffunc = self.helix()
             # reffunc = self.helix_spin()
-            # reffunc = self.yawing_only()
+            # reffunc = self.triangle()
+            # reffunc = self.sawtooth()
         elif self.cushion_time + self.flight_time <= self.time_from_start <= self.time_before_land:
             reffunc = self.hover_ref_func(1)
         else:
@@ -555,7 +561,9 @@ class OffboardControl(Node):
         self.publish_rates_setpoint(final[0], final[1], final[2], final[3])
 
         # Log the states, inputs, and reference trajectories for data analysis
-        state_input_ref_log_info = [float(self.x), float(self.y), float(self.z), float(self.yaw), float(final[0]), float(final[1]), float(final[2]), float(final[3]), float(reffunc[0][-1]), float(reffunc[1][-1]), float(reffunc[2][-1]), float(reffunc[-1][-1]), self.time_from_start]
+        print(f"reffunc:({reffunc[0][-1], reffunc[1][-1], reffunc[2][-1], reffunc[-1][-1]})\n")
+        controller_callback_time = time.time() - t0
+        state_input_ref_log_info = [float(self.x), float(self.y), float(self.z), float(self.yaw), float(final[0]), float(final[1]), float(final[2]), float(final[3]), float(reffunc[0][-1]), float(reffunc[1][-1]), float(reffunc[2][-1]), float(reffunc[-1][-1]), self.time_from_start, controller_callback_time]
         self.update_logged_data(state_input_ref_log_info)
         # self.state_input_ref_log_msg.data = [float(self.x), float(self.y), float(self.z), float(self.yaw), float(final[0]), float(final[1]), float(final[2]), float(final[3]), float(reffunc[0][0]), float(reffunc[1][0]), float(reffunc[2][0]), float(reffunc[3][0])]
         # self.state_input_ref_log_publisher_.publish(self.state_input_ref_log_msg)
@@ -576,6 +584,7 @@ class OffboardControl(Node):
         self.ref_z_log.append(data[10])
         self.ref_yaw_log.append(data[11])
         self.ctrl_loop_time_log.append(data[12])
+        self.ctrl_callback_timel_log.append(data[13])
     def get_x_log(self): return np.array(self.x_log).reshape(-1, 1)
     def get_y_log(self): return np.array(self.y_log).reshape(-1, 1)
     def get_z_log(self): return np.array(self.z_log).reshape(-1, 1)
@@ -590,6 +599,7 @@ class OffboardControl(Node):
     def get_ref_yaw_log(self): return np.array(self.ref_yaw_log).reshape(-1, 1)
     def get_ctrl_loop_time_log(self): return np.array(self.ctrl_loop_time_log).reshape(-1, 1)
     def get_mpc_timel_log(self): return np.array(self.mpc_timel_array).reshape(-1, 1)
+    def get_ctrl_callback_timel_log(self): return np.array(self.ctrl_callback_timel_log).reshape(-1, 1)
     def get_metadata(self): return self.metadata.reshape(-1, 1)
 
     def get_new_control_input(self, reffunc):
@@ -644,10 +654,14 @@ class OffboardControl(Node):
         print("circle_horz_ref_func")
 
         # Generate a time array for the trajectory
-        t_start = self.time_from_start
+        t_start = self.time_from_start - self.cushion_time
         t = np.linspace(t_start, t_start + self.horizon, self.num_steps)
 
         PERIOD = 13
+
+        if self.double_speed:
+            PERIOD /= 2
+
         w = 2 * np.pi / PERIOD
 
         # Compute trajectory components as arrays
@@ -672,14 +686,19 @@ class OffboardControl(Node):
         """ Returns circle reference trajectory in horizontal plane while yawing. """
         print("circle_horz_spin_ref_func")
 
-        t = self.time_from_start
-        t = np.linspace(t, t+self.horizon, self.num_steps)
+        # Generate a time array for the trajectory
+        t_start = self.time_from_start - self.cushion_time
+        t = np.linspace(t_start, t_start + self.horizon, self.num_steps)
 
         PERIOD = 13 # used to have w=.5 which is rougly PERIOD = 4*pi ~= 12.56637
         w = 2*np.pi / PERIOD
 
         SPIN_PERIOD = 15
-        yaw_ref = (t - self.cushion_time) / (SPIN_PERIOD / (2*m.pi))
+
+        if self.double_speed:
+            PERIOD /= 2
+
+        yaw_ref = (t) / (SPIN_PERIOD / (2*m.pi))
 
         x = .6*np.cos(w*t).reshape(-1)
         y = .6*np.sin(w*t).reshape(-1)
@@ -701,15 +720,19 @@ class OffboardControl(Node):
         print("circle_vert_ref_func")
 
         # Generate a time array for the trajectory
-        t_start = self.time_from_start
+        t_start = self.time_from_start - self.cushion_time
         t = np.linspace(t_start, t_start + self.horizon, self.num_steps)
 
         PERIOD = 13
+
+        if self.double_speed:
+            PERIOD /= 2
+
         w = 2 * np.pi / PERIOD
 
         # Compute trajectory components as arrays
-        x = np.zeros(self.num_steps).reshape(-1)
-        y = 0.35 * np.cos(w * t).reshape(-1)
+        x = 0.35 * np.cos(w * t).reshape(-1)
+        y = np.zeros(self.num_steps).reshape(-1)
         z = -1 * (0.35 * np.sin(w * t) + 0.75).reshape(-1)
         vx = np.zeros(self.num_steps).reshape(-1)
         vy = np.zeros(self.num_steps).reshape(-1)
@@ -729,16 +752,20 @@ class OffboardControl(Node):
         print("fig8_horz_ref_func")
 
         # Generate a time array for the trajectory
-        t_start = self.time_from_start
+        t_start = self.time_from_start - self.cushion_time
         t = np.linspace(t_start, t_start + self.horizon, self.num_steps)
 
         PERIOD = 13
+
+        if self.double_speed:
+            PERIOD /= 2
+
         w = 2 * np.pi / PERIOD
 
         # Compute trajectory components as arrays
         x = 0.35 * np.sin(2 * w * t).reshape(-1)
         y = 0.35 * np.sin(w * t).reshape(-1)
-        z = -0.7 * np.ones(self.num_steps).reshape(-1)
+        z = -0.8 * np.ones(self.num_steps).reshape(-1)
         vx = np.zeros(self.num_steps).reshape(-1)
         vy = np.zeros(self.num_steps).reshape(-1)
         vz = np.zeros(self.num_steps).reshape(-1)
@@ -757,10 +784,14 @@ class OffboardControl(Node):
         print("fig8_vert_ref_func_short")
 
         # Generate a time array for the trajectory
-        t_start = self.time_from_start
+        t_start = self.time_from_start - self.cushion_time
         t = np.linspace(t_start, t_start + self.horizon, self.num_steps)
 
         PERIOD = 13
+
+        if self.double_speed:
+            PERIOD /= 2
+
         w = 2 * np.pi / PERIOD
 
         # Compute trajectory components as arrays
@@ -785,10 +816,14 @@ class OffboardControl(Node):
         print("fig8_vert_ref_func_tall")
 
         # Generate a time array for the trajectory
-        t_start = self.time_from_start
+        t_start = self.time_from_start - self.cushion_time
         t = np.linspace(t_start, t_start + self.horizon, self.num_steps)
 
         PERIOD = 13
+
+        if self.double_speed:
+            PERIOD /= 2
+
         w = 2 * np.pi / PERIOD
 
         # Compute trajectory components as arrays
@@ -813,13 +848,17 @@ class OffboardControl(Node):
         print("helix")
         
         # Generate a time array for the trajectory
-        t_start = self.time_from_start
+        t_start = self.time_from_start - self.cushion_time
         t = np.linspace(t_start, t_start + self.horizon, self.num_steps)
-        
+
         PERIOD = 13
+
+        if self.double_speed:
+            PERIOD /= 2
+
         w = 2 * np.pi / PERIOD
         
-        PERIOD_Z = 13
+        PERIOD_Z = 13 / 2.0
         w_z = 2 * np.pi / PERIOD_Z
         z0 = 0.8
         height_variance = 0.3
@@ -846,10 +885,14 @@ class OffboardControl(Node):
         print("helix_spin")
         
         # Generate a time array for the trajectory
-        t_start = self.time_from_start
+        t_start = self.time_from_start - self.cushion_time
         t = np.linspace(t_start, t_start + self.horizon, self.num_steps)
-        
+
         PERIOD = 13
+        
+        if self.double_speed:
+            PERIOD /= 2
+
         w = 2 * np.pi / PERIOD
 
         PERIOD_Z = 13
@@ -858,7 +901,7 @@ class OffboardControl(Node):
         height_variance = 0.3
 
         SPIN_PERIOD = 15
-        yaw_ref = (t - self.cushion_time) / (SPIN_PERIOD / (2*m.pi))
+        yaw_ref = (t) / (SPIN_PERIOD / (2*m.pi))
 
         # Compute trajectory components as arrays
         x = 0.6 * np.cos(w * t).reshape(-1)
@@ -882,16 +925,16 @@ class OffboardControl(Node):
         print("yawing_only")
 
         # Generate a time array for the trajectory
-        t_start = self.time_from_start
+        t_start = self.time_from_start - self.cushion_time
         t = np.linspace(t_start, t_start + self.horizon, self.num_steps)
 
         SPIN_PERIOD = 15
-        yaw_ref = (t - self.cushion_time) / (SPIN_PERIOD / (2*m.pi))
+        yaw_ref = (t) / (SPIN_PERIOD / (2*m.pi))
 
         # All other components remain constant
         x = np.zeros(self.num_steps).reshape(-1)
         y = np.zeros(self.num_steps).reshape(-1)
-        z = -0.7 * np.ones(self.num_steps).reshape(-1)
+        z = -0.5 * np.ones(self.num_steps).reshape(-1)
         vx = np.zeros(self.num_steps).reshape(-1)
         vy = np.zeros(self.num_steps).reshape(-1)
         vz = np.zeros(self.num_steps).reshape(-1)
@@ -903,6 +946,146 @@ class OffboardControl(Node):
         r = np.array([x, y, z, vx, vy, vz, roll, pitch, yaw])
 
         return r
+    
+    def interpolate_sawtooth(self, t, num_repeats):
+        # Define the points for the modified sawtooth trajectory
+        points = [
+            (0, 0), (0, 0.4), (0.4, -0.4), (0.4, 0.4), (0.4, -0.4),
+            (0, 0.4), (0, -0.4), (-0.4, 0.4), (-0.4, -0.4), 
+            (-0.4, 0.4), (0, -0.4), (0, 0)
+        ]
+
+        traj_time = self.flight_time  # Total time for the trajectory
+        N = num_repeats  # Number of repetitions
+        traj_time /= N  # Adjust the total time based on the number of repetitions
+
+        # Define the segment time
+        T_seg = traj_time / (len(points) - 1)  # Adjust segment time based on the number of points
+        
+        # Calculate the time within the current cycle
+        cycle_time = t % ((len(points) - 1) * T_seg)
+        
+        # Determine which segment we're in
+        segment = int(cycle_time // T_seg)
+        
+        # Time within the current segment
+        local_time = cycle_time % T_seg
+        
+        # Select the start and end points of the current segment
+        start_point = points[segment]
+        end_point = points[(segment + 1) % len(points)]
+        
+        # Linear interpolation for the current segment
+        x = start_point[0] + (end_point[0] - start_point[0]) * (local_time / T_seg)
+        y = start_point[1] + (end_point[1] - start_point[1]) * (local_time / T_seg)
+        
+        return x, y
+
+    def sawtooth(self, num_repeats=1):
+        num_repeats = 2 if self.double_speed else 1
+        """ Returns a /|/ sawtooth reference trajectory that repeats num_repeats times within self.flight_time. """
+        print(f"sawtooth_pattern with {num_repeats} repeats")
+
+        # Generate a time array for the trajectory
+        t_start = self.time_from_start - self.cushion_time
+        times = np.linspace(t_start, t_start + self.horizon, self.num_steps)
+        trajectory = [self.interpolate_sawtooth(t, num_repeats) for t in times]
+        x_vals, y_vals = zip(*trajectory)
+
+        x = np.array(x_vals).reshape(-1)
+        y = np.array(y_vals).reshape(-1)
+        z = -0.7 * np.ones(self.num_steps).reshape(-1)
+        vx = np.zeros(self.num_steps).reshape(-1)
+        vy = np.zeros(self.num_steps).reshape(-1)
+        vz = np.zeros(self.num_steps).reshape(-1)
+        roll = np.zeros(self.num_steps).reshape(-1)
+        pitch = np.zeros(self.num_steps).reshape(-1)
+        yaw = np.zeros(self.num_steps).reshape(-1)
+
+        # Construct the reference trajectory array
+        r = np.array([x, y, z, vx, vy, vz, roll, pitch, yaw])
+
+        return r
+    
+    def interpolate_triangle(self, t, num_repeats):
+        # Define the triangle points
+        side_length = 0.6  # replace with your desired side length
+        h = np.sqrt(side_length**2 - (side_length/2)**2)
+        points = [(0, h/2), (side_length/2, -h / 2), (-side_length/2, -h / 2)]
+
+        traj_time = self.flight_time  # Total time for the trajectory
+        N = num_repeats  # Number of repetitions
+
+        # Calculate the segment time
+        T_seg = traj_time / (3 * N)
+
+        # Calculate the time within the current cycle
+        cycle_time = t % (3 * T_seg)
+        
+        # Determine which segment we're in
+        segment = int(cycle_time // T_seg)
+        
+        # Time within the current segment
+        local_time = cycle_time % T_seg
+        
+        # Select the start and end points of the current segment
+        start_point = points[segment]
+        end_point = points[(segment + 1) % 3]
+        
+        # Linear interpolation for the current segment
+        x = start_point[0] + (end_point[0] - start_point[0]) * (local_time / T_seg)
+        y = start_point[1] + (end_point[1] - start_point[1]) * (local_time / T_seg)
+
+        return x, y
+    
+    def triangle(self, num_repeats = 1):
+        num_repeats = 2 if self.double_speed else 1
+        """ Returns interpolated triangular reference trajectory ([x, y, z, yaw]) """
+        print(f"triangular_trajectory with {num_repeats} repeats")
+        z_ref = -0.8 # Constant altitude
+        yaw_ref = 0.0 # Constant yaw
+
+        # Define the first point
+        side_length = 0.6
+        h = np.sqrt(side_length**2 - (side_length / 2)**2)
+        first_point = (0, h / 2)
+
+        # Wait until within 0.1 units of the first point
+        if self.made_it == 0:
+            if np.sqrt((self.x - first_point[0])**2 + (self.y - first_point[1])**2) > 0.1:
+                print("not here")
+                values = np.array([first_point[0], first_point[1], z_ref, 0.0, 0.0, 0.0, 0.0, 0.0, yaw_ref])
+                # Repeat this array 20 times along the first axis
+                r = np.tile(values, (20, 1)).T
+                return r
+            else:
+                print("here")
+                self.made_it = 1
+
+        # Generate a time array for the trajectory
+        t_start = self.time_from_start - self.cushion_time
+        times = np.linspace(t_start, t_start + self.horizon, self.num_steps)
+        trajectory = [self.interpolate_triangle(t, num_repeats) for t in times]
+        x_vals, y_vals = zip(*trajectory)
+
+        x = np.array(x_vals).reshape(-1)
+        y = np.array(y_vals).reshape(-1)
+        z = z_ref * np.ones(self.num_steps).reshape(-1)
+        vx = np.zeros(self.num_steps).reshape(-1)
+        vy = np.zeros(self.num_steps).reshape(-1)
+        vz = np.zeros(self.num_steps).reshape(-1)
+        roll = np.zeros(self.num_steps).reshape(-1)
+        pitch = np.zeros(self.num_steps).reshape(-1)
+        yaw = np.zeros(self.num_steps).reshape(-1)
+
+        # Construct the reference trajectory array
+        r = np.array([x, y, z, vx, vy, vz, roll, pitch, yaw])
+        print(f"{r.shape = }")
+
+        return r
+
+
+
 
 
 # ~~ Entry point of the code -> Initializes the node and spins it. Also handles exceptions and logging ~~
@@ -931,6 +1114,8 @@ def main(args=None):
         traceback.print_exc()
     finally:
         shutdown_logging()
+        if offboard_control.pyjoules_on:
+            offboard_control.csv_handler.save_data()
         print("\nNode has shut down.")
 
 if __name__ == '__main__':
