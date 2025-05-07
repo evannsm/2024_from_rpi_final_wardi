@@ -30,7 +30,7 @@ from std_msgs.msg import Float64MultiArray
 from .workingModel import Quadrotor
 from .workingGenMPC import QuadrotorMPC2
 
-from transforms3d.euler import quat2euler
+# from transforms3d.euler import quat2euler
 # import transforms3d
 
 import math as m
@@ -865,7 +865,7 @@ class OffboardControl(Node):
 
         return r
     
-    def get_helix_position(self, t, z0=1.1, z_max=2.8, radius=0.6, num_turns=3, cycle_time=30.0):
+    def get_helix_position(self, t, z0=0.85, z_max=2.6, radius=0.6, num_turns=3, cycle_time=30.0):
         """
         Returns (x, y, z) at time t for a helix with its own up/down cycle time.
         The helix:

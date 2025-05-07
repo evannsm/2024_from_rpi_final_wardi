@@ -229,8 +229,8 @@ class OffboardControl(Node):
         # self.main_traj = self.fig8_horz_ref_func
         # self.main_traj = self.fig8_vert_ref_func_short
         # self.main_traj = self.fig8_vert_ref_func_tall
-        # self.main_traj = self.helix
-        self.main_traj = self.helix_spin
+        self.main_traj = self.helix
+        # self.main_traj = self.helix_spin
         # self.main_traj = self.triangle
         # self.main_traj = self.sawtooth
 
@@ -1512,7 +1512,7 @@ class OffboardControl(Node):
 
         return r
     
-    def get_helix_position(self, t, z0=1.1, z_max=2.8, radius=0.6, num_turns=3, cycle_time=30.0):
+    def get_helix_position(self, t, z0=0.85, z_max=2.6, radius=0.6, num_turns=3, cycle_time=30.0):
         """
         Returns (x, y, z) at time t for a helix with its own up/down cycle time.
         The helix:

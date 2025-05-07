@@ -127,7 +127,7 @@ class OffboardControl(Node):
 
         # Initialize variables:
         self.cushion_time = 10.0
-        self.flight_time = 20.0
+        self.flight_time = 90.0
         self.time_before_land = self.flight_time + 2*(self.cushion_time)
         print(f"time_before_land: {self.time_before_land}")
         self.offboard_setpoint_counter = 0 #helps us count 10 cycles of sending offboard heartbeat before switching to offboard mode and arming
