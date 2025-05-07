@@ -21,6 +21,8 @@ setup(
     entry_points={
         'console_scripts': [
             'nr_quad = quad_newton_raphson.nr_quad:main',
+            'nr_diff_flat = quad_newton_raphson.nr_diff_flat:main',
+            'full_jax_nr_quad = quad_newton_raphson.full_jax_nr_quad:main',
         ],
     },
 )

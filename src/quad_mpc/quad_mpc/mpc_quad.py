@@ -510,8 +510,8 @@ class OffboardControl(Node):
         if self.time_from_start <= self.cushion_time:
             reffunc = self.hover_ref_func(1)
         elif self.cushion_time < self.time_from_start < self.cushion_time + self.flight_time:
-            # reffunc = self.circle_horz_ref_func()
-            reffunc = self.circle_horz_spin_ref_func()
+            reffunc = self.circle_horz_ref_func()
+            # reffunc = self.circle_horz_spin_ref_func()
             # reffunc = self.circle_vert_ref_func()
             # reffunc = self.fig8_horz_ref_func()
             # reffunc = self.fig8_vert_ref_func_short()
@@ -858,7 +858,7 @@ class OffboardControl(Node):
 
         w = 2 * np.pi / PERIOD
         
-        PERIOD_Z = 13 / 2.0
+        PERIOD_Z = 13
         w_z = 2 * np.pi / PERIOD_Z
         z0 = 0.8
         height_variance = 0.3

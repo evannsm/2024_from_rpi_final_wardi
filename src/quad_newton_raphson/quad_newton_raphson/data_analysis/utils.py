@@ -112,7 +112,7 @@ def make_plot(df):
     ylim_rates = (-1.0, 1.0)
 
     # plot throttle vs time
-    axs[2, 0].plot(df['time'], -1*df['throttle'], label='throttle', color='blue')
+    axs[2, 0].plot(df['time'], 1*df['throttle'], label='throttle', color='blue')
     axs[2, 0].axhline(y=max_throttle, color='red', linestyle='--', label=f'+{max_throttle}')
     axs[2, 0].axhline(y=0, color='red', linestyle='--', label=f'{0}')
     axs[2, 0].set_ylabel('throttle')
