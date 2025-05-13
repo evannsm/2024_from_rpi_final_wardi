@@ -1,0 +1,128 @@
+[1.643s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'list', '-p', '--base-paths', '/home/factslabegmc/2024_from_rpi_final_wardi']
+[1.643s] DEBUG:colcon:Parsed command line arguments: Namespace(allow_overriding=[], base_paths=['/home/factslabegmc/2024_from_rpi_final_wardi'], build_base='build', ignore_user_meta=False, log_base=None, log_level=None, main=<bound method ListVerb.main of <colcon_package_information.verb.list.ListVerb object at 0x7f948c265910>>, metas=['./colcon.meta'], names_only=False, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, paths=None, paths_only=True, topological_graph=False, topological_graph_density=False, topological_graph_dot=False, topological_graph_dot_cluster=False, topological_graph_dot_include_skipped=False, topological_graph_legend=False, topological_order=False, verb_extension=<colcon_package_information.verb.list.ListVerb object at 0x7f948c265910>, verb_name='list', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f948c1091f0>)
+[1.883s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[1.883s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[1.883s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[1.883s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[1.883s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[1.884s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/factslabegmc/2024_from_rpi_final_wardi'
+[1.884s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi) by extensions ['ignore', 'ignore_ament_install']
+[1.884s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi) by extension 'ignore'
+[1.884s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi) by extension 'ignore_ament_install'
+[1.884s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi) by extensions ['colcon_pkg']
+[1.884s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi) by extension 'colcon_pkg'
+[1.884s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi) by extensions ['colcon_meta']
+[1.884s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi) by extension 'colcon_meta'
+[1.884s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi) by extensions ['ros']
+[1.884s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi) by extension 'ros'
+[1.893s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi) by extensions ['cmake', 'python']
+[1.893s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi) by extension 'cmake'
+[1.893s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi) by extension 'python'
+[1.893s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi) by extensions ['python_setup_py']
+[1.893s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi) by extension 'python_setup_py'
+[1.893s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/build) by extensions ['ignore', 'ignore_ament_install']
+[1.893s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/build) by extension 'ignore'
+[1.893s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/build) ignored
+[1.893s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/holybro_mpc_c_generated_code) by extensions ['ignore', 'ignore_ament_install']
+[1.893s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/holybro_mpc_c_generated_code) by extension 'ignore'
+[1.893s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/holybro_mpc_c_generated_code) by extension 'ignore_ament_install'
+[1.893s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/holybro_mpc_c_generated_code) by extensions ['colcon_pkg']
+[1.893s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/holybro_mpc_c_generated_code) by extension 'colcon_pkg'
+[1.893s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/holybro_mpc_c_generated_code) by extensions ['colcon_meta']
+[1.894s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/holybro_mpc_c_generated_code) by extension 'colcon_meta'
+[1.894s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/holybro_mpc_c_generated_code) by extensions ['ros']
+[1.894s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/holybro_mpc_c_generated_code) by extension 'ros'
+[1.894s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/holybro_mpc_c_generated_code) by extensions ['cmake', 'python']
+[1.894s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/holybro_mpc_c_generated_code) by extension 'cmake'
+[1.894s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/holybro_mpc_c_generated_code) by extension 'python'
+[1.894s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/holybro_mpc_c_generated_code) by extensions ['python_setup_py']
+[1.894s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/holybro_mpc_c_generated_code) by extension 'python_setup_py'
+[1.894s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/holybro_mpc_c_generated_code/holybro_model) by extensions ['ignore', 'ignore_ament_install']
+[1.894s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/holybro_mpc_c_generated_code/holybro_model) by extension 'ignore'
+[1.894s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/holybro_mpc_c_generated_code/holybro_model) by extension 'ignore_ament_install'
+[1.894s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/holybro_mpc_c_generated_code/holybro_model) by extensions ['colcon_pkg']
+[1.894s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/holybro_mpc_c_generated_code/holybro_model) by extension 'colcon_pkg'
+[1.894s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/holybro_mpc_c_generated_code/holybro_model) by extensions ['colcon_meta']
+[1.894s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/holybro_mpc_c_generated_code/holybro_model) by extension 'colcon_meta'
+[1.894s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/holybro_mpc_c_generated_code/holybro_model) by extensions ['ros']
+[1.894s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/holybro_mpc_c_generated_code/holybro_model) by extension 'ros'
+[1.894s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/holybro_mpc_c_generated_code/holybro_model) by extensions ['cmake', 'python']
+[1.894s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/holybro_mpc_c_generated_code/holybro_model) by extension 'cmake'
+[1.894s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/holybro_mpc_c_generated_code/holybro_model) by extension 'python'
+[1.894s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/holybro_mpc_c_generated_code/holybro_model) by extensions ['python_setup_py']
+[1.894s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/holybro_mpc_c_generated_code/holybro_model) by extension 'python_setup_py'
+[1.894s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/install) by extensions ['ignore', 'ignore_ament_install']
+[1.894s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/install) by extension 'ignore'
+[1.894s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/install) ignored
+[1.894s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/log) by extensions ['ignore', 'ignore_ament_install']
+[1.895s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/log) by extension 'ignore'
+[1.895s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/log) ignored
+[1.895s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src) by extensions ['ignore', 'ignore_ament_install']
+[1.895s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src) by extension 'ignore'
+[1.895s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src) by extension 'ignore_ament_install'
+[1.895s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src) by extensions ['colcon_pkg']
+[1.895s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src) by extension 'colcon_pkg'
+[1.895s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src) by extensions ['colcon_meta']
+[1.895s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src) by extension 'colcon_meta'
+[1.895s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src) by extensions ['ros']
+[1.895s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src) by extension 'ros'
+[1.895s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src) by extensions ['cmake', 'python']
+[1.895s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src) by extension 'cmake'
+[1.895s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src) by extension 'python'
+[1.895s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src) by extensions ['python_setup_py']
+[1.895s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src) by extension 'python_setup_py'
+[1.895s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src/final_NMPC) by extensions ['ignore', 'ignore_ament_install']
+[1.895s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src/final_NMPC) by extension 'ignore'
+[1.895s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src/final_NMPC) by extension 'ignore_ament_install'
+[1.895s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src/final_NMPC) by extensions ['colcon_pkg']
+[1.895s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src/final_NMPC) by extension 'colcon_pkg'
+[1.895s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src/final_NMPC) by extensions ['colcon_meta']
+[1.895s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src/final_NMPC) by extension 'colcon_meta'
+[1.895s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src/final_NMPC) by extensions ['ros']
+[1.895s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src/final_NMPC) by extension 'ros'
+[1.897s] DEBUG:colcon.colcon_core.package_identification:Package '/home/factslabegmc/2024_from_rpi_final_wardi/src/final_NMPC' with type 'ros.ament_python' and name 'final_NMPC'
+[1.898s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src/final_NR) by extensions ['ignore', 'ignore_ament_install']
+[1.898s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src/final_NR) by extension 'ignore'
+[1.898s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src/final_NR) by extension 'ignore_ament_install'
+[1.898s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src/final_NR) by extensions ['colcon_pkg']
+[1.898s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src/final_NR) by extension 'colcon_pkg'
+[1.898s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src/final_NR) by extensions ['colcon_meta']
+[1.898s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src/final_NR) by extension 'colcon_meta'
+[1.898s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src/final_NR) by extensions ['ros']
+[1.898s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src/final_NR) by extension 'ros'
+[1.899s] DEBUG:colcon.colcon_core.package_identification:Package '/home/factslabegmc/2024_from_rpi_final_wardi/src/final_NR' with type 'ros.ament_python' and name 'final_NR'
+[1.899s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src/px4_msgs) by extensions ['ignore', 'ignore_ament_install']
+[1.899s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src/px4_msgs) by extension 'ignore'
+[1.899s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src/px4_msgs) by extension 'ignore_ament_install'
+[1.899s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src/px4_msgs) by extensions ['colcon_pkg']
+[1.899s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src/px4_msgs) by extension 'colcon_pkg'
+[1.899s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src/px4_msgs) by extensions ['colcon_meta']
+[1.899s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src/px4_msgs) by extension 'colcon_meta'
+[1.899s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src/px4_msgs) by extensions ['ros']
+[1.899s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src/px4_msgs) by extension 'ros'
+[1.899s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src/px4_msgs) by extensions ['cmake', 'python']
+[1.899s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src/px4_msgs) by extension 'cmake'
+[1.899s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src/px4_msgs) by extension 'python'
+[1.899s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src/px4_msgs) by extensions ['python_setup_py']
+[1.899s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src/px4_msgs) by extension 'python_setup_py'
+[1.899s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src/quad_mpc) by extensions ['ignore', 'ignore_ament_install']
+[1.899s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src/quad_mpc) by extension 'ignore'
+[1.899s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src/quad_mpc) by extension 'ignore_ament_install'
+[1.899s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src/quad_mpc) by extensions ['colcon_pkg']
+[1.899s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src/quad_mpc) by extension 'colcon_pkg'
+[1.899s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src/quad_mpc) by extensions ['colcon_meta']
+[1.899s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src/quad_mpc) by extension 'colcon_meta'
+[1.899s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src/quad_mpc) by extensions ['ros']
+[1.899s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src/quad_mpc) by extension 'ros'
+[1.900s] DEBUG:colcon.colcon_core.package_identification:Package '/home/factslabegmc/2024_from_rpi_final_wardi/src/quad_mpc' with type 'ros.ament_python' and name 'quad_mpc'
+[1.900s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src/quad_newton_raphson) by extensions ['ignore', 'ignore_ament_install']
+[1.900s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src/quad_newton_raphson) by extension 'ignore'
+[1.900s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src/quad_newton_raphson) by extension 'ignore_ament_install'
+[1.900s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src/quad_newton_raphson) by extensions ['colcon_pkg']
+[1.900s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src/quad_newton_raphson) by extension 'colcon_pkg'
+[1.900s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src/quad_newton_raphson) by extensions ['colcon_meta']
+[1.900s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src/quad_newton_raphson) by extension 'colcon_meta'
+[1.900s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src/quad_newton_raphson) by extensions ['ros']
+[1.900s] Level 1:colcon.colcon_core.package_identification:_identify(/home/factslabegmc/2024_from_rpi_final_wardi/src/quad_newton_raphson) by extension 'ros'
+[1.901s] DEBUG:colcon.colcon_core.package_identification:Package '/home/factslabegmc/2024_from_rpi_final_wardi/src/quad_newton_raphson' with type 'ros.ament_python' and name 'quad_newton_raphson'
+[1.901s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults

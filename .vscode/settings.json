@@ -1,0 +1,16 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/evannsrpi/nr_journal_v114/build/quad_newton_raphson",
+        "/home/factslabegmc/2024_from_rpi_final_wardi/install/quad_newton_raphson/lib/python3.10/site-packages",
+        "/home/evannsrpi/nr_journal_v114/build/quad_mpc",
+        "/home/factslabegmc/2024_from_rpi_final_wardi/install/quad_mpc/lib/python3.10/site-packages",
+        "/opt/ros/galactic/lib/python3.8/site-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/evannsrpi/nr_journal_v114/build/quad_newton_raphson",
+        "/home/factslabegmc/2024_from_rpi_final_wardi/install/quad_newton_raphson/lib/python3.10/site-packages",
+        "/home/evannsrpi/nr_journal_v114/build/quad_mpc",
+        "/home/factslabegmc/2024_from_rpi_final_wardi/install/quad_mpc/lib/python3.10/site-packages",
+        "/opt/ros/galactic/lib/python3.8/site-packages"
+    ]
+}
